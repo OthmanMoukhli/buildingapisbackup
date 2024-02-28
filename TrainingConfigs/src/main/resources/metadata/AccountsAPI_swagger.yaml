@@ -99,6 +99,46 @@ paths:
             application/json:
               example:
                 message: Accounts created
+  /accounts/{account_id}:
+    get:
+      tags:
+      - Accounts
+      summary: Retrieve an account by ID
+      description: Retrieve an account by ID
+      operationId: getAccountById
+      parameters:
+      - name: user_id
+        in: header
+        description: Identifier of the person or system requesting the data
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      - name: account_id
+        in: path
+        description: ID of the account
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Account'
+              examples:
+                AccountExample:
+                  $ref: '#/components/examples/AccountExample'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              example:
+                message: Account not found
 components:
   schemas:
     Account:
@@ -152,6 +192,15 @@ components:
       schema:
         type: integer
   examples:
+    AccountExample:
+      summary: an account object
+      value:
+        id: 1
+        name: ACME
+        type: business
+        address: 1 Main St,Los Angeles,CA,92000,USA
+        air_miles: 5000
+        created_at: '2020-09-21T12:00:00Z'
     AccountsExample:
       summary: an array of accounts
       value:

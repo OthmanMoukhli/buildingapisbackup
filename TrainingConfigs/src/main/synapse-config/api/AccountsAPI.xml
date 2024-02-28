@@ -30,4 +30,59 @@
         </outSequence>
         <faultSequence/>
     </resource>
+    <resource methods="GET" uri-template="/accounts/{account_id}">
+        <inSequence>
+            <!--This is generated API skeleton.-->
+            <property expression="get-property('uri.var.account_id')" name="account_id" scope="default" type="STRING"/>
+            <!--Business Logic Goes Here-->
+            <dblookup>
+                <connection>
+                    <pool>
+                        <dsName>MysqlConJNDI1</dsName>
+                    </pool>
+                </connection>
+                <statement>
+                    <sql><![CDATA[SELECT * FROM flights_customers WHERE accountID = ?]]></sql>
+                    <parameter expression="get-property('account_id')" type="NUMERIC"/>
+                    <result column="accountID" name="accountID"/>
+                    <result column="country" name="country"/>
+                    <result column="city" name="city"/>
+                    <result column="street" name="street"/>
+                    <result column="accountType" name="accountType"/>
+                    <result column="name" name="name"/>
+                    <result column="state" name="state"/>
+                    <result column="postal" name="postal"/>
+                    <result column="creationDate" name="creationDate"/>
+                    <result column="miles" name="miles"/>
+                </statement>
+            </dblookup>
+            <payloadFactory media-type="json">
+                <format>{&#xd;
+	"id": $1&#xd;
+	"name": "$2",&#xd;
+	"type": "$3",&#xd;
+	"address": "$4, $5, $6, $7, $8",&#xd;
+	"air_miles": $9,&#xd;
+	"created_at": "$10"&#xd;
+}</format>
+                <args>
+                    <arg evaluator="xml" expression="get-property('accountID')"/>
+                    <arg evaluator="xml" expression="get-property('name')"/>
+                    <arg evaluator="xml" expression="get-property('accountType')"/>
+                    <arg evaluator="xml" expression="get-property('street')"/>
+                    <arg evaluator="xml" expression="get-property('city')"/>
+                    <arg evaluator="xml" expression="get-property('state')"/>
+                    <arg evaluator="xml" expression="get-property('postal')"/>
+                    <arg evaluator="xml" expression="get-property('country')"/>
+                    <arg evaluator="xml" expression="get-property('miles')"/>
+                    <arg evaluator="xml" expression="get-property('creationDate')"/>
+                </args>
+            </payloadFactory>
+            <loopback/>
+        </inSequence>
+        <outSequence>
+            <respond/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
 </api>
