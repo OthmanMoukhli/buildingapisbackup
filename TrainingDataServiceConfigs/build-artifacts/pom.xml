@@ -13,4 +13,7 @@
   <packaging>pom</packaging>
   <name>TrainingDataServiceConfigs_module</name>
   <description>TrainingDataServiceConfigs_module</description>
+  <modules>
+    <module>dataservice/datasource_DataService</module>
+  </modules>
 </project>

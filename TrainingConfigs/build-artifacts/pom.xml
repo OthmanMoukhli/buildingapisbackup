@@ -17,5 +17,6 @@
     <module>api/AccountsAPI</module>
     <module>metadata/AccountsAPI_swagger</module>
     <module>metadata/AccountsAPI_metadata</module>
+    <module>endpoints/GetAllFlightsCustomers</module>
   </modules>
 </project>

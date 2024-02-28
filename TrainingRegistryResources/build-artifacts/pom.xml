@@ -15,5 +15,9 @@
   <description>TrainingRegistryResources_module</description>
   <modules>
     <module>resource/swagger</module>
+    <module>resource/XMLtoJSON</module>
+    <module>resource/XMLtoJSON_inputSchema</module>
+    <module>resource/XMLtoJSON_outputSchema</module>
+    <module>resource/XMLtoJSON_xsltStyleSheet</module>
   </modules>
 </project>

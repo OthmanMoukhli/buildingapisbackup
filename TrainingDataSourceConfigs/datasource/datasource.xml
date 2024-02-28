@@ -1,0 +1,15 @@
+<datasource>
+  <name>MySQLConnection</name>
+  <description>MySQL Connection</description>
+  <jndiConfig useDataSourceFactory="false">
+    <name>MysqlConJNDI1</name>
+  </jndiConfig>
+  <definition type="RDBMS">
+    <configuration>
+      <driverClassName>com.mysql.jdbc.Driver</driverClassName>
+      <url>jdbc:mysql://mudb.learn.mulesoft.com:3306/training</url>
+      <username>mule</username>
+      <password>mule</password>
+    </configuration>
+  </definition>
+</datasource>
