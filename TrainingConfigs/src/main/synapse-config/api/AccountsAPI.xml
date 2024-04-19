@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/default" name="AccountsAPI" publishSwagger="/_system/governance/swagger_files/swagger.yaml" version="1.0.0" version-type="context" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" url-mapping="/accounts">
+        <inSequence>
+            <!--This is generated API skeleton.-->
+            <!--Business Logic Goes Here-->
+            <header action="remove" name="Accept" scope="transport"/>
+            <call>
+                <endpoint key="GetAllFlightsCustomers"/>
+            </call>
+            <datamapper config="gov:datamapper/XMLtoJSON.dmc" inputSchema="gov:datamapper/XMLtoJSON_inputSchema.json" inputType="XML" outputSchema="gov:datamapper/XMLtoJSON_outputSchema.json" outputType="JSON" xsltStyleSheet="gov:datamapper/XMLtoJSON_xsltStyleSheet.xml"/>
+            <loopback/>
+        </inSequence>
+        <outSequence>
+            <respond/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" url-mapping="/accounts">
+        <inSequence>
+            <!--This is generated API skeleton.-->
+            <!--Business Logic Goes Here-->
+            <payloadFactory media-type="json">
+                <format>{"message" : "Accounts created"}</format>
+                <args/>
+            </payloadFactory>
+            <loopback/>
+        </inSequence>
+        <outSequence>
+            <respond/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" uri-template="/accounts/{account_id}">
+        <inSequence>
+            <!--This is generated API skeleton.-->
+            <property expression="get-property('uri.var.account_id')" name="account_id" scope="default" type="STRING"/>
+            <!--Business Logic Goes Here-->
+            <dblookup>
+                <connection>
+                    <pool>
+                        <dsName>MysqlConJNDI1</dsName>
+                    </pool>
+                </connection>
+                <statement>
+                    <sql><![CDATA[SELECT * FROM flights_customers WHERE accountID = ?]]></sql>
+                    <parameter expression="get-property('account_id')" type="NUMERIC"/>
+                    <result column="accountID" name="accountID"/>
+                    <result column="country" name="country"/>
+                    <result column="city" name="city"/>
+                    <result column="street" name="street"/>
+                    <result column="accountType" name="accountType"/>
+                    <result column="name" name="name"/>
+                    <result column="state" name="state"/>
+                    <result column="postal" name="postal"/>
+                    <result column="creationDate" name="creationDate"/>
+                    <result column="miles" name="miles"/>
+                </statement>
+            </dblookup>
+            <payloadFactory media-type="json">
+                <format>{&#xd;
+	"id": $1,&#xd;
+	"name": "$2",&#xd;
+	"type": "$3",&#xd;
+	"address": "$4, $5, $6, $7, $8",&#xd;
+	"air_miles": $9,&#xd;
+	"created_at": "$10"&#xd;
+}</format>
+                <args>
+                    <arg evaluator="xml" expression="get-property('accountID')"/>
+                    <arg evaluator="xml" expression="get-property('name')"/>
+                    <arg evaluator="xml" expression="get-property('accountType')"/>
+                    <arg evaluator="xml" expression="get-property('street')"/>
+                    <arg evaluator="xml" expression="get-property('city')"/>
+                    <arg evaluator="xml" expression="get-property('state')"/>
+                    <arg evaluator="xml" expression="get-property('postal')"/>
+                    <arg evaluator="xml" expression="get-property('country')"/>
+                    <arg evaluator="xml" expression="get-property('miles')"/>
+                    <arg evaluator="xml" expression="get-property('creationDate')"/>
+                </args>
+            </payloadFactory>
+            <loopback/>
+        </inSequence>
+        <outSequence>
+            <respond/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>

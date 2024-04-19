@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datamapper:DataMapperRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:datamapper="http:///org/wso2/developerstudio/eclipse/gmf/datamapper">
+  <input>
+    <treeNode name="soapenv:Envelope" schemaDataType="OBJECT" level="1">
+      <node name="soapenv:Body" schemaDataType="OBJECT" level="2">
+        <node name="flights_customersCollection" schemaDataType="OBJECT" level="3">
+          <node name="flights_customers" level="4">
+            <node name="accountID" schemaDataType="NUMBER" level="5">
+              <properties key="type" value="number"/>
+              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/accountID"/>
+              <properties key="nullable" value="false"/>
+              <outNode>
+                <outgoingLink inNode="//@output/@treeNode.0/@node.0/@inNode"/>
+              </outNode>
+              <inNode/>
+            </node>
+            <node name="country" schemaDataType="STRING" level="5">
+              <properties key="type" value="string"/>
+              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/country"/>
+              <properties key="nullable" value="false"/>
+              <outNode>
+                <outgoingLink inNode="//@operators.0/@basicContainer/@leftContainer/@leftConnectors.4/@inNode"/>
+              </outNode>
+              <inNode/>
+            </node>
+            <node name="city" schemaDataType="STRING" level="5">
+              <properties key="type" value="string"/>
+              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/city"/>
+              <properties key="nullable" value="false"/>
+              <outNode>
+                <outgoingLink inNode="//@operators.0/@basicContainer/@leftContainer/@leftConnectors.1/@inNode"/>
+              </outNode>
+              <inNode/>
+            </node>
+            <node name="street" schemaDataType="STRING" level="5">
+              <properties key="type" value="string"/>
+              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/street"/>
+              <properties key="nullable" value="false"/>
+              <outNode>
+                <outgoingLink inNode="//@operators.0/@basicContainer/@leftContainer/@leftConnectors.0/@inNode"/>
+              </outNode>
+              <inNode/>
+            </node>
+            <node name="accountType" schemaDataType="STRING" level="5">
+              <properties key="type" value="string"/>
+              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/accountType"/>
+              <properties key="nullable" value="false"/>
+              <outNode>
+                <outgoingLink inNode="//@output/@treeNode.0/@node.2/@inNode"/>
+              </outNode>
+              <inNode/>
+            </node>
+            <node name="name" schemaDataType="STRING" level="5">
+              <properties key="type" value="string"/>
+              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/name"/>
+              <properties key="nullable" value="false"/>
+              <outNode>
+                <outgoingLink inNode="//@output/@treeNode.0/@node.1/@inNode"/>
+              </outNode>
+              <inNode/>
+            </node>
+            <node name="state" schemaDataType="STRING" level="5">
+              <properties key="type" value="string"/>
+              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/state"/>
+              <properties key="nullable" value="false"/>
+              <outNode>
+                <outgoingLink inNode="//@operators.0/@basicContainer/@leftContainer/@leftConnectors.2/@inNode"/>
+              </outNode>
+              <inNode/>
+            </node>
+            <node name="postal" schemaDataType="NUMBER" level="5">
+              <properties key="type" value="number"/>
+              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/postal"/>
+              <properties key="nullable" value="false"/>
+              <outNode>
+                <outgoingLink inNode="//@operators.0/@basicContainer/@leftContainer/@leftConnectors.3/@inNode"/>
+              </outNode>
+              <inNode/>
+            </node>
+            <node name="creationDate" schemaDataType="STRING" level="5">
+              <properties key="type" value="string"/>
+              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/creationDate"/>
+              <properties key="nullable" value="false"/>
+              <outNode>
+                <outgoingLink inNode="//@output/@treeNode.0/@node.5/@inNode"/>
+              </outNode>
+              <inNode/>
+            </node>
+            <node name="miles" schemaDataType="NUMBER" level="5">
+              <properties key="type" value="number"/>
+              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/miles"/>
+              <properties key="nullable" value="false"/>
+              <outNode>
+                <outgoingLink inNode="//@output/@treeNode.0/@node.4/@inNode"/>
+              </outNode>
+              <inNode/>
+            </node>
+            <properties key="type" value="array"/>
+            <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers"/>
+            <properties key="items_id" value="http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0"/>
+            <properties key="items_type" value="object"/>
+            <properties key="nullable" value="false"/>
+            <properties key="properties_id" value="{accountID={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/accountID, type=number}, country={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/country, type=string}, city={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/city, type=string}, street={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/street, type=string}, accountType={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/accountType, type=string}, name={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/name, type=string}, state={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/state, type=string}, postal={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/postal, type=number}, creationDate={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/creationDate, type=string}, miles={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/miles, type=number}}"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="type" value="object"/>
+          <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/flights_customersCollection"/>
+          <properties key="nullable" value="false"/>
+          <properties key="properties_id" value="{flights_customers={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers, type=array, items=[{id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0, type=object, properties={accountID={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/accountID, type=number}, country={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/country, type=string}, city={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/city, type=string}, street={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/street, type=string}, accountType={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/accountType, type=string}, name={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/name, type=string}, state={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/state, type=string}, postal={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/postal, type=number}, creationDate={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/creationDate, type=string}, miles={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/miles, type=number}}}]}}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <properties key="namespaces" value="{prefix=soapenv, url=http://schemas.xmlsoap.org/soap/envelope/}"/>
+        <properties key="type" value="object"/>
+        <properties key="id" value="http://wso2jsonschema.org/soapenv:Body"/>
+        <properties key="nullable" value="false"/>
+        <properties key="properties_id" value="{flights_customersCollection={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection, type=object, properties={flights_customers={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers, type=array, items=[{id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0, type=object, properties={accountID={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/accountID, type=number}, country={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/country, type=string}, city={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/city, type=string}, street={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/street, type=string}, accountType={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/accountType, type=string}, name={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/name, type=string}, state={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/state, type=string}, postal={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/postal, type=number}, creationDate={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/creationDate, type=string}, miles={id=http://wso2jsonschema.org/soapenv:Body/flights_customersCollection/flights_customers/0/miles, type=number}}}]}}}}"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <properties key="namespaces" value="{prefix=soapenv, url=http://schemas.xmlsoap.org/soap/envelope/}"/>
+      <properties key="namespaces" value="{prefix=soapenv, url=http://schemas.xmlsoap.org/soap/envelope/}"/>
+      <properties key="type" value="object"/>
+      <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+      <properties key="id" value="http://wso2jsonschema.org"/>
+      <properties key="nullable" value="false"/>
+      <outNode/>
+      <inNode/>
+    </treeNode>
+  </input>
+  <output>
+    <treeNode name="root" level="1">
+      <node name="id" schemaDataType="NUMBER" level="2">
+        <properties key="type" value="number"/>
+        <properties key="id" value="http://wso2jsonschema.org/0/id"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.0/@node.0/@node.0/@outNode/@outgoingLink.0"/>
+      </node>
+      <node name="name" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/0/name"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.0/@node.0/@node.5/@outNode/@outgoingLink.0"/>
+      </node>
+      <node name="type" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/0/type"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.0/@node.0/@node.4/@outNode/@outgoingLink.0"/>
+      </node>
+      <node name="address" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/0/address"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@operators.0/@basicContainer/@rightContainer/@rightConnectors.0/@outNode/@outgoingLink.0"/>
+      </node>
+      <node name="air_miles" schemaDataType="NUMBER" level="2">
+        <properties key="type" value="number"/>
+        <properties key="id" value="http://wso2jsonschema.org/0/air_miles"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.0/@node.0/@node.9/@outNode/@outgoingLink.0"/>
+      </node>
+      <node name="created_at" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/0/created_at"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.0/@node.0/@node.8/@outNode/@outgoingLink.0"/>
+      </node>
+      <properties key="type" value="array"/>
+      <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+      <properties key="id" value="http://wso2jsonschema.org"/>
+      <properties key="items_id" value="http://wso2jsonschema.org/0"/>
+      <properties key="items_type" value="object"/>
+      <properties key="nullable" value="false"/>
+      <outNode/>
+      <inNode/>
+    </treeNode>
+  </output>
+  <operators xsi:type="datamapper:Concat" defaultInputConnectors="2" defaultOutputConnectors="1" inputSizeFixed="false" operatorType="CONCAT" delimiter=", ">
+    <basicContainer>
+      <leftContainer>
+        <leftConnectors>
+          <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.0/@node.0/@node.3/@outNode/@outgoingLink.0"/>
+        </leftConnectors>
+        <leftConnectors>
+          <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.0/@node.0/@node.2/@outNode/@outgoingLink.0"/>
+        </leftConnectors>
+        <leftConnectors>
+          <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.0/@node.0/@node.6/@outNode/@outgoingLink.0"/>
+        </leftConnectors>
+        <leftConnectors>
+          <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.0/@node.0/@node.7/@outNode/@outgoingLink.0"/>
+        </leftConnectors>
+        <leftConnectors>
+          <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.0/@node.0/@node.1/@outNode/@outgoingLink.0"/>
+        </leftConnectors>
+      </leftContainer>
+      <rightContainer>
+        <rightConnectors>
+          <outNode>
+            <outgoingLink inNode="//@output/@treeNode.0/@node.3/@inNode"/>
+          </outNode>
+        </rightConnectors>
+      </rightContainer>
+    </basicContainer>
+  </operators>
+</datamapper:DataMapperRoot>
